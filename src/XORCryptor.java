@@ -1,15 +1,14 @@
 public class XORCryptor {
 
-    public static String crypt(String string, String key){
+    public static byte[] encrypt(byte[] str, byte[] key){
 
+        byte[] bytes = new byte[str.length];
 
-        return "";
-    }
+        for (int i = 0; i < str.length; i++) {
+            bytes[i] = (byte) (str[i] ^ key[i%key.length] ^ (i & 0xFF));
+        }
 
-    public static String encrypt(String string, String key){
-
-
-        return "";
+        return bytes;
     }
 
 }

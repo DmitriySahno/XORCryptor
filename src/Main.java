@@ -4,12 +4,11 @@ public class Main {
         String str = "Мама мыла раму";
         String key = "SkillFactory2021";
 
-        String result;
+        byte[] result;
 
+        System.out.println(new String(result = XORCryptor.encrypt(str.getBytes(), key.getBytes())));
 
-        System.out.println(result = XORCryptor.crypt(str, key));
-
-        System.out.println(XORCryptor.encrypt(result, key));
+        System.out.println(new String(XORCryptor.encrypt(result, key.getBytes())));
 
     }
 
